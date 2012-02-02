@@ -63,3 +63,7 @@ a {
     margin: 5px;
     padding: 5px 0px;
 }
+#bro {
+    padding-bottom: 5px;
+    border-bottom: solid 2px #666666;
+}

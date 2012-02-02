@@ -207,6 +207,10 @@ window.addEventListener("DOMContentLoaded", function () {
         };
         errors = [];
     };
+    function browse () {
+        window.location = "guideBuilder.html"
+        window.onLoad = showCheck
+    };
     var game = ge("game");
     game.addEventListener("change", gameSelect);
     var sg = ge("show");
