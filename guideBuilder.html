@@ -15,9 +15,9 @@
 	<body>
 		<header><img id="logo" src="Images/GuideHax.png" width="294px"/></header>
 		<h1>Guide Builder</h1>
-		<p>Follow the steps below to create your very own guide.</p>
+		<p id="txt">Follow the steps below to create your very own guide.</p>
 		<nav id="nav">
-			<a href="additem.html" id="addMore" style="display:none">Make new guide</a>
+			<a href="guideBuilder.html" id="addMore" style="display:none">Make new guide</a>
 			<a href="#" id="show">Show my guides</a>
 			<a href="#" id="clear">Clear my guides</a>
 		</nav>
@@ -33,7 +33,7 @@
 						<option value="Skyrim">Skyrim</option>
 						<option value="TQ">Titan Quest</option>
 					</select></li>
-					<li id="TS" ><label for="type">Type:</label></br><select disabled="true" id="type">
+					<li id="TS" ><label for="type">Type:</label></br><select id="type">
 						<option value="default">Select game for options</option>
 					</select></li>
 					<li><label id="c" for="content">Content:</label></br><textarea id="content" placeholder="Type your guide here"></textarea>

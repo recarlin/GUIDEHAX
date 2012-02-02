@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function ge(id) {
         var se = document.getElementById(id);
         return se;
-    }
+    };
     function toggle(x) {
         switch(x){
             case "on":
@@ -19,6 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 ge("clear").style.display = "inline-block";
                 ge("show").style.display = "none";
                 ge("addMore").style.display = "inline-block";
+                ge("txt").innerHTML = "Here are all of your saved guides. Click the edit and delete buttons to change individual guides."
                 break;
             case "off":
                 ge("guide").style.display = "block";
@@ -26,11 +27,11 @@ window.addEventListener("DOMContentLoaded", function () {
                 ge("show").style.display = "inline-block";
                 ge("addMore").style.display = "none";
                 ge("guides").style.display = "none";
+                ge("txt").innerHTML = "Follow the steps below to create your very own guide."
                 break;
             default:
-                return false;
-        }
-    }
+        };
+    };
     function gameSelect() {
         game = ge("game").value
         popType(game)
@@ -41,15 +42,14 @@ window.addEventListener("DOMContentLoaded", function () {
                 gt.options[gt.options.length] = new Option(types[x][index], types[x][index]);
             };
         };
-        ge("type").removeAttribute("disabled")
     };
     function showCheck () {
         if (localStorage.length === 0) {
             var popAsk = confirm("There are no saved guides. Populate with filler?");
             if(popAsk) {
                 addFiller();
-                showRunes();
-                alert("Filler guides have been added.")
+                alert("Filler guides have been added.");
+                showGuides();
             } else {
                 alert("Filler guides not added.")
             };
@@ -116,12 +116,17 @@ window.addEventListener("DOMContentLoaded", function () {
         buttonsLi.style.margin = "0px 0px 10px 0px";
     };
     function clearGuides() {
-        if(localStorage.length === 0) {
-            alert("You currently have no saved guides.")
+        if(localStorage.length != 0) {
+            var delAsk = confirm("Delete all your guides?");
+            if(delAsk) {
+                localStorage.clear();
+                alert("Your guides have been deleted.")
+                window.location.reload();
+            } else {
+                alert("Your guides have not been deleted.")
+            };
         } else {
-            localStorage.clear();
-            alert("Cleared saved guides.")
-            window.location.reload();
+            alert("You have no guides saved.")
         };
     };
     function valiData(e) {
@@ -178,9 +183,9 @@ window.addEventListener("DOMContentLoaded", function () {
         toggle("off");
         ge("author").value  = guide.author[1]
         ge("game").value    = guide.game[1]
+        gameSelect();
         ge("type").value    = guide.type[1]
         ge("content").value = guide.content[1]
-        ge("date").value    = guide.date[1]
         ge("add").value     = "Save Edit";
         currentKey = (this.key)
     };
@@ -203,7 +208,7 @@ window.addEventListener("DOMContentLoaded", function () {
         errors = [];
     };
     var game = ge("game");
-    game.addEventListener("blur", gameSelect);
+    game.addEventListener("change", gameSelect);
     var sg = ge("show");
     sg.addEventListener("click", showCheck);
     var cg = ge("clear");

@@ -27,7 +27,7 @@ p {
 nav {
     text-align: center;
 }
-#show, #clear, #addMore {
+#show, #clear, #addMore, #add {
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -45,6 +45,16 @@ textarea {
     width: 200px;
 }
 #add {
+    margin: 0px;
+    width: 260px;
+}
+#sub {
+    display: block;
+    text-align: center;
+    margin: 5px
+}
+#del, #edit {
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     font: 14px/1em garamond;
@@ -52,12 +62,7 @@ textarea {
     background: #777777;
     border: solid 2px #666666;
     border-radius: 10px;
-    margin: 0px;
-    padding: 3px;
-    width: 260px;
-}
-#sub {
-    display: block;
-    text-align: center;
-    margin: 5px
+    margin: 0px 3px;
+    padding: 1px;
+    width: 80px;
 }
