@@ -6,8 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
         LoL:["Bruiser", "AP Carry", "AD Carry", "Support", "Jungle"],
         WoW:["Death Knight", "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"],
         Skyrim:["Caster", "Melee", "Ranger", "Stealth", "Tank"],
-        MC:["Build", "Redstone", "Server", "Tricks & Tips"],
-        TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warrior"]
+        TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warfare"]
     };
     function ge(id) {
         var se = document.getElementById(id);

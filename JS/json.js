@@ -1,34 +1,122 @@
 var filler = {
-    "runeSet1": {
-        "sec": ["Section Title:", "My Marks"],
-        "cat": ["Rune Category:", "Mark"],
-        "type": ["Rune Type:", "Destruction - 1 APen, .57 MPen"],
-        "amount": ["Amount:", "9"],
-        "explain": ["Explaination:", "Gives my build more damage."],
-        "date": ["Date Added:", "2012-01-24"]
+    "LoL1": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "LoL"],
+        "type": ["Type:", "Bruiser"],
+        "content": ["Content:", "Get tanky items and protect your carries."]
     },
-    "runeSet2": {
-        "sec": ["Section Title:", "My Seals"],
-        "cat": ["Rune Category:", "Seal"],
-        "type": ["Rune Type:", "Resilence - 1.41 Armor"],
-        "amount": ["Amount:", "9"],
-        "explain": ["Explaination:", "Makes me a durable against attacks early on."],
-        "date": ["Date Added:", "2012-01-24"]
+    "LoL2": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "LoL"],
+        "type": ["Type:", "AP Carry"],
+        "content": ["Content:", "Build ability power and cast spells on your enemies."]
     },
-    "runeSet3": {
-        "sec": ["Section Title:", "My Glyphs"],
-        "cat": ["Rune Category:", "Glyph"],
-        "type": ["Rune Type:", "Warding - 1.49 MR"],
-        "amount": ["Amount:", "9"],
-        "explain": ["Explaination:", "Protects me from spells."],
-        "date": ["Date Added:", "2012-01-24"]
+    "LoL3": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "LoL"],
+        "type": ["Type:", "AD Carry"],
+        "content": ["Content:", "Build attack damage and auto attack enemies."]
     },
-    "runeSet4": {
-        "sec": ["Section Title:", "My Quints"],
-        "cat": ["Rune Category:", "Quintessence"],
-        "type": ["Rune Type:", "Strength - 2.25 AD"],
-        "amount": ["Amount:", "3"],
-        "explain": ["Explaination:", "Adds some flat damage to my attacks."],
-        "date": ["Date Added:", "2012-01-24"]
+    "LoL4": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "LoL"],
+        "type": ["Type:", "Support"],
+        "content": ["Content:", "Build gold/5 items and let your AD carry farm."]
+    },
+    "LoL5": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "LoL"],
+        "type": ["Type:", "Jungle"],
+        "content": ["Content:", "Get armor and lifesteal to survive the jungle. Gank when needed."]
+    },
+    "WoW1": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "WoW"],
+        "type": ["Type:", "Mage"],
+        "content": ["Content:", "Intelligence is your main stat. Frost and arcane are best for PvP, while Fire is great for PvE."]
+    },
+    "WoW2": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "WoW"],
+        "type": ["Type:", "Warrior"],
+        "content": ["Content:", "Strength, strength, and more strength! A really high-end 2-hander is all you need."]
+    },
+    "WoW3": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "WoW"],
+        "type": ["Type:", "Rogue"],
+        "content": ["Content:", "Agility is key and so are some good daggers."]
+    },
+    "WoW4": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "WoW"],
+        "type": ["Type:", "Priest"],
+        "content": ["Content:", "Be sure to watch everyone's HP, not just the tanks."]
+    },
+    "WoW5": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "WoW"],
+        "type": ["Type:", "Shaman"],
+        "content": ["Content:", "Get items focusing on strength and agility. Also, keep track of your totems."]
+    },
+    "Skyrim1": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "Skyrim"],
+        "type": ["Type:", "Caster"],
+        "content": ["Content:", "Casters can be tricky if you get into melee. You are very weak, so kite them around."]
+    },
+    "Skyrim2": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "Skyrim"],
+        "type": ["Type:", "Melee"],
+        "content": ["Content:", "If you like blocking, you will want to go 2-hander. For full damage, two 1-handers."]
+    },
+    "Skyrim3": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "Skyrim"],
+        "type": ["Type:", "Ranger"],
+        "content": ["Content:", "Bows work great with stealth! Long range sneak attacks are always fun."]
+    },
+    "Skyrim4": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "Skyrim"],
+        "type": ["Type:", "Stealth"],
+        "content": ["Content:", "Get a good dagger and go enchanting. You can get a huge multiplier on your stealth attacks!"]
+    },
+    "Skyrim5": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "Skyrim"],
+        "type": ["Type:", "Tank"],
+        "content": ["Content:", "Pump all your stats into health, heavy armor, and blacksmithing. Laugh as no one can touch you."]
+    },
+    "Titan Quest1": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "TQ"],
+        "type": ["Type:", "Warfare"],
+        "content": ["Content:", "One of the best skill trees in the game because of the Dual Wield. Very powerful in any form!"]
+    },
+    "Titan Quest2": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "TQ"],
+        "type": ["Type:", "Hunting"],
+        "content": ["Content:", "This skill tree is all about piercing! Either a bow or a spear should be your choice weapon."]
+    },
+    "Titan Quest3": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "TQ"],
+        "type": ["Type:", "Rogue"],
+        "content": ["Content:", "A great skill tree to join with hunting or warfare, both making some of the most damage in the game."]
+    },
+    "Titan Quest4": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "TQ"],
+        "type": ["Type:", "Storm"],
+        "content": ["Content:", "Lightning Bolt is great for bosses and Lightning Ball is great for crowds."]
+    },
+    "Titan Quest5": {
+        "author": ["Author:", "TheLawGivah"],
+        "game": ["Game:", "TQ"],
+        "type": ["Type:", "Dream"],
+        "content": ["Content:", "The Nightmare is only really effective with other pets. Other than that, get a trance and Psonic Touch for great damage."]
     }
 }
