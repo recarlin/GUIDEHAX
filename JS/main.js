@@ -2,78 +2,60 @@
 // MIU 1202
 // Project 1
 window.addEventListener("DOMContentLoaded", function () {
-    var runes = {
-        mark: ["Alacrity - 1.7% AS", "Desolation - 1.66 APen", "Destruction - 1 APen, .57 MPen", "Focus - .16% CD", "Force - .1 AP/lvl", "Fortitude - 3.47 HP", "Furor - 2.23% CritD", "Insight - .95 MPen", "Intellect - 5.91 MP", "Knowledge - 1.17 MP/lvl", "Malice - .93% CritC", "Might - .13 AD/lvl", "Potency - .59 AP", "Replenishment - .26 Mregen/5", "Resilience - .91 Armor", "Shielding - .07 MR/lvl", "Strength - .95 AD", "Vitality - .54 HP/lvl", "Warding - .97 MR"],
-        seal: ["Alacrity - .76% AS", "Avarice - .25 G/10", "Clarity - .065 Mregen/5/lvl", "Defense - .15/lvl", "Endurance - .5% MHP", "Focus - .29% CD", "Force - .1 AP/lvl", "Fortitude - 5.35 HP", "Furor - .76% CritD", "Intellect - 6.89 MP", "Knowledge - 1.17 MP/lvl", "Lucidity - .064 Eregen/5/lvl", "Malice - .42% CritC", "Meditation - .63 Eregen/5", "Might - .06 AD/lvl", "Potency - .59 AP", "Regeneration - .11 Hregen/5/lvl", "Replenishment - .41 Mregen/5", "Resilience - 1.41 Armor", "Shielding - .1 MR/lvl", "Strength - .43 AD", "Vigor - .43 Hregen/5", "Vitality - 1.08 HP/lvl", "Warding - .74 MR"],
-        glyph: ["Acumen - 2.2 Energy", "Alacrity - .64% AS", "Celerity - .05 CD/lvl", "Clarity - .055 Mregen/5/lvl", "Focus - .65% CD", "Force - .17 AP/lvl", "Fortitude - 2.67 HP", "Furor - .56% CritD", "Insight - .57 MPen", "Intellect - 11.25 MP", "Knowledge - 1.42 MP/lvl", "Malice - .28% CritC", "Might - .04 AD/lvl", "Potency - .99 AP", "Replenishment - .31 Mregen/5", "Resilience - .7 Armor", "Sapience - .161 Energy/lvl", "Shielding - .15 MR/lvl", "Strength - .28 AD", "Vigor - .27 Hregen/5", "Vitality - .54 HP/lvl", "Warding - 1.49 MR"],
-        quint: ["Acumen - 5.4 Energy", "Alacrity - 3.4% AS", "Avarice - 1 G/10", "Celerity - .13 CD/lvl", "Clarity - .24 Mregen/5/lvl", "Defense - .38/lvl", "Desolation - 3.33 APen", "Destruction - 2 APen, 1.13 MPen",  "Endurance - 1.5% MHP", "Focus - 1.64% CD", "Force - .43 AP/lvl", "Fortitude - 26 HP", "Furor - 4.46% CritD", "Insight - 1.89 MPen", "Intellect - 37.5 MP", "Knowledge - 4.17 MP/lvl", "Malice - 1.86% CritC", "Meditation - 1.575 Eregen/5", "Might - .25 AD/lvl", "Potency - 4.95 AP", "Regeneration - .28 Hregen/5/lvl", "Replenishment - 1.25 Mregen/5", "Resilience - 4.26 Armor", "Revival - 5% Time Dead", "Shielding - .37 MR/lvl", "Strength - 2.25 AD", "Swiftness - 1.5% MS", "Transmutation - 2% SV", "Vampirism - 2% LS", "Vigor - 2.7 Hregen/5", "Vitality - 2.7 HP/lvl", "Warding - 4.5 MR", "Wisdom - 2% EXP"]
+    var types = {
+        LoL:["Bruiser", "AP Carry", "AD Carry", "Support", "Jungle"],
+        WoW:["Death Knight", "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"],
+        Skyrim:["Caster", "Melee", "Ranger", "Stealth", "Tank"],
+        MC:["Build", "Redstone", "Server", "Tricks & Tips"],
+        TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warrior"]
     };
     function ge(id) {
-        var e = document.getElementById(id);
-        return e;
+        var se = document.getElementById(id);
+        return se;
     }
     function toggle(x) {
         switch(x){
             case "on":
-                ge("runeForm").style.display = "none";
+                ge("guide").style.display = "none";
                 ge("clear").style.display = "inline-block";
                 ge("show").style.display = "none";
                 ge("addMore").style.display = "inline-block";
                 break;
             case "off":
-                ge("runeForm").style.display = "block";
+                ge("guide").style.display = "block";
                 ge("clear").style.display = "inline-block";
                 ge("show").style.display = "inline-block";
                 ge("addMore").style.display = "none";
-                ge("runes").style.display = "none";
+                ge("guides").style.display = "none";
                 break;
             default:
                 return false;
         }
     }
     function gameSelect() {
-        if(runeCat === "Mark"){
-            popSelect(runes.mark);
-            showPic("Mark");
-        } else {
-            if(runeCat === "Seal"){
-                popSelect(runes.seal);
-                showPic("Seal");
-            } else {
-                if(runeCat === "Glyph") {
-                    popSelect(runes.glyph);
-                    showPic("Glyph");
-                } else {
-                    if(runeCat === "Quintessence"){
-                        popSelect(runes.quint);
-                        showPic("Quintessence");
-                    };
-                };
+        game = ge("game").value
+        popType(game)
+        function popType(x) {
+            var gt = ge("type");
+            gt.options.length = 0
+            for(index in types[x]) {
+                gt.options[gt.options.length] = new Option(types[x][index], types[x][index]);
             };
         };
-        function popSelect(x) {
-            var rs = ge("runeType");
-            rs.options.length = 0
-            for(index in x) {
-                rs.options[rs.options.length] = new Option(x[index], x[index]);
-            };
-        };
-        function showPic(x) {
-            pic.setAttribute("src", "Images/" + x +".png");
-        };
+        ge("type").removeAttribute("disabled")
     };
     function showCheck () {
         if (localStorage.length === 0) {
-            var popAsk = confirm("There are no saved runes. Populate with filler runes?");
+            var popAsk = confirm("There are no saved guides. Populate with filler?");
             if(popAsk) {
                 addFiller();
                 showRunes();
-                alert("Filler runes have been added.")
+                alert("Filler guides have been added.")
             } else {
-                alert("Filler runes not added.")
+                alert("Filler guides not added.")
             };
         } else {
-            showRunes();
+            showGuides();
         };
     };
     function addFiller() {
@@ -82,13 +64,13 @@ window.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem(id, JSON.stringify(filler[n]));
         };
     };
-    function showRunes() {     
+    function showGuides() {     
         var makeDiv = document.createElement("div");
-        makeDiv.setAttribute("id", "runes");
+        makeDiv.setAttribute("id", "guides");
         var makeList = document.createElement("ol");
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
-        ge("runes").style.display = "block";
+        ge("guides").style.display = "block";
         for(i=0, l=localStorage.length; i<l; i++) {
             var makeli = document.createElement("li");
             var buttonsLi = document.createElement("li");
@@ -103,7 +85,6 @@ window.addEventListener("DOMContentLoaded", function () {
             makeSubList.style.listStyle = "none";
             makeSubList.style.textIndent = "-35px";
             buttonsLi.style.textIndent = "0px";
-            getImage(rune.cat[1], makeSubList);
             for(var r in rune) {
                 var makeSubli = document.createElement("li");
                 makeSubList.appendChild(makeSubli);
@@ -120,8 +101,8 @@ window.addEventListener("DOMContentLoaded", function () {
         editButton.href = "#";
         editButton.key = key;
         editButton.setAttribute("id", "edit")
-        var editTxt = "Edit Rune Set";
-        editButton.addEventListener("click", editRunes);
+        var editTxt = "Edit guide";
+        editButton.addEventListener("click", editGuide);
         editButton.innerHTML = editTxt;
         buttonsLi.appendChild(editButton);
         
@@ -129,8 +110,8 @@ window.addEventListener("DOMContentLoaded", function () {
         deleteButton.href = "#";
         deleteButton.key = key;
         deleteButton.setAttribute("id", "del")
-        var deleteTxt = "Delete Rune Set";
-        deleteButton.addEventListener("click", deleteRunes);
+        var deleteTxt = "Delete guide";
+        deleteButton.addEventListener("click", deleteGuide);
         deleteButton.innerHTML = deleteTxt;
         buttonsLi.appendChild(deleteButton);
         buttonsLi.style.margin = "0px 0px 10px 0px";
@@ -144,15 +125,50 @@ window.addEventListener("DOMContentLoaded", function () {
             window.location.reload();
         };
     };
+    function valiData(e) {
+        e.preventDefault();
+        var ga = ge("author"),
+            gg = ge("game"),
+            gc = ge("content"),
+            el = ge("errorList");
+            el.innerHTML = "";
+            ge("a").style.color = "#333333";
+            ge("b").style.color = "#333333";
+            ge("c").style.color = "#333333";
+        if (ga.value === "") {
+            var authorError = "Please type in an author";
+            ge("a").style.color = "#990000";
+            errors.push(authorError);
+        }
+        if (gg.value === "default") {
+            var gameError = "Please select a game";
+            ge("b").style.color = "#990000";
+            errors.push(gameError);
+        }
+        if (gc.value === "") {
+            var contentError = "Please type in some content";
+            ge("c").style.color = "#990000";
+            errors.push(contentError);
+        }
+        if (errors.length === 0) {
+            if (ge("add").value === "Save Edit") {
+                localStorage.removeItem(currentKey);
+                addGuide();
+            } else {
+                addGuide();
+            };
+        } else {
+            showErrors();
+        };
+    };
     function addGuide() {
         var id = Math.floor(Math.random()*100000000);
         var guide = {};
-            guide.author    = ["Guide author", ge("author").value]
-            guide.game      = ["Game", ge("type").value];
-            guide.type      = ["Guide type", ge("type").value];
+            guide.author    = ["Author", ge("author").value]
+            guide.game      = ["Game", ge("game").value];
+            guide.type      = ["Type", ge("type").value];
             guide.content   = ["Content", ge("content").value];
-            guide.date      = ["Date Added", ge("date").value];
-        localStorage.setItem(id, JSON.stringify(rune))
+        localStorage.setItem(id, JSON.stringify(guide))
         alert("Guide Saved!")
         document.location.reload();
     };
@@ -178,37 +194,6 @@ window.addEventListener("DOMContentLoaded", function () {
             alert("guide not deleted.")
         };
     };
-    function valiData(e) {
-        var ga = ge("author"),
-            ct = ge("content"),
-            da = ge("date"),
-            el = ge("errorList");
-            el.innerHTML = "";
-            ga.style.border = "1px solid black";
-            ct.style.border = "1px solid black";
-            da.style.border = "1px solid black";
-        if (ga.value === "") {
-            var titleError = "Please give a section title";
-            ga.style.border = "2px solid red";
-            errors.push(titleError);
-        }
-        if (ex.value === "") {
-            var contentError = "Please give a rune explaination";
-            ex.style.border = "2px solid red";
-            errors.push(contentError);
-        }
-        if (errors.length === 0) {
-            if (ge("add").value === "Save Edit") {
-                localStorage.removeItem(currentKey);
-                addGuide();
-            } else {
-                addGuide();
-            };
-        } else {
-            showErrors();
-        };
-        e.preventDefault();
-    };
     function showErrors() {
         var el = ge("errorList")
         for(i=0, l=errors.length; i<l; i++) {
@@ -218,14 +203,14 @@ window.addEventListener("DOMContentLoaded", function () {
         };
         errors = [];
     };
-    var game = ge("runeCat");
-    game.addEventListener("click", gameSelect);
-    var sr = ge("show");
-    sr.addEventListener("click", showCheck);
+    var game = ge("game");
+    game.addEventListener("blur", gameSelect);
+    var sg = ge("show");
+    sg.addEventListener("click", showCheck);
     var cg = ge("clear");
     cg.addEventListener("click", clearGuides);
-    var ar = ge("add");
-    ar.addEventListener("click", valiData);
+    var ag = ge("add");
+    ag.addEventListener("click", valiData);
     var errors = [],
         currentKey;
 });
