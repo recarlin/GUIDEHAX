@@ -4,13 +4,21 @@
  Project 1
 */
 html {
-    background: lightgray;
+    background: #999999;
 }
 body {
     color: #333333;
 }
+#logo {
+    padding: 5px 3px 0px 3px;
+}
+p {
+    padding: 0px 5px;
+    text-align: center;
+    font: 14px/1em garamond;
+}
 #ser {
-    background: #999999;
+    background: #777777;
     border: solid 2px #666666;
     border-radius: 10px;
     padding: 3px;
@@ -18,22 +26,10 @@ body {
 #searchBox {
     width: 219px;
 }
-#logo {
-    padding: 5px 3px 0px 3px;
-
-}
 #start {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font: bold 30px/1em garamond;
-    color: #660000;
-    background: #999999;
-    border: solid 2px #666666;
-    border-radius: 10px;
+    font: 24px/1em garamond;
     margin: 0px 40px 5px 40px;
-    padding: 5px 0px;
-
+    background: #444444;
 }
 #CTA {
     border: solid 2px #666666;
@@ -43,8 +39,10 @@ body {
 }
 h1 {
     text-align:center;
+    font: bold 30px/1em garamond;
 }
 h3 {
+    font: bold 20px/1.2em garamond;
     border-bottom: solid 2px #666666;
 }
 #brow {
@@ -57,9 +55,9 @@ a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font: bold 16px/1em garamond;
+    font: 16px/1em garamond;
     color: #660000;
-    background: #999999;
+    background: #777777;
     border: solid 2px #666666;
     border-radius: 10px;
     margin: 5px;

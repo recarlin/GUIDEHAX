@@ -5,55 +5,35 @@
 <html>
 	<head>
 		<meta charset="utf-8"  />
-		<meta name="description" content="Application to assist users in creating a League of Legends guide" />
-		<meta name="keywords" content="League of Legends, guide, application" />
+		<meta name="description" content="GuideHax Guide Builder" />
+		<meta name="keywords" content="game, guide, builder" />
 		<meta name="robots" content="index, follow" />
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
-		<title>Setup Your Guide</title>
-		<link rel="stylesheet" href="CSS/style.css" />
+		<title>GuideHax - Guide Builder</title>
+		<link rel="stylesheet" href="CSS/guideStyle.css" />
 	</head>
 	<body>
 		<header><img id="logo" src="Images/GuideHax.png" width="294px"/></header>
-		<nav id="nav">
-			<a href="additem.html" id="addMore" style="display:none">Add More Runes</a>
-			<a href="#" id="show">Show Runes</a>
-			<a href="#" id="clear">Clear Runes</a>
-		</nav>
-		<ul id="errorList"></ul>
-		<form action="#" id="runeForm" method="post">
+		<h1>Guide Builder</h1>
+		<p>Follow the steps below to create your very own guide.</br>Select a game for addition options.</p>
+		<form action="#" id="guide" method="post">
 			<fieldset>
-				<legend>Rune Options</legend>
 				<ol>
-					<li><label for="secTitle">Title:</label><input type="text" id="secTitle" placeholder="*Title for rune set*"/></li>
-					<li id="test">Rune Category:
-						<ul id="runeCat"><img id="pic" style="float:right"/>
-							<li><input type="radio" value="Mark" id="mark" name="runeCat"/><label id="m" for="mark">Mark</label></li>
-							<li><input type="radio" value="Seal" id="seal" name="runeCat"/><label id="s" for="seal">Seal</label></li>
-							<li><input type="radio" value="Glyph" id="glyph" name="runeCat"/><label id="g" for="glyph">Glyph</label></li>
-							<li><input type="radio" value="Quintessence" id="quint" name="runeCat"/><label id="q" for="quint">Quintessence</label></li>
-						</ul>
-					</li>
-					<li><label for="runeType">Rune Type:</label></br>
-						<select id="runeType">
-							<option value="selectCat">*Select a rune category*</option>
-						</select>
-					</li>
-					<li><label id="showQuant" for="quant">Quantity:</label><br/>
-						<input type="range" min="0" max="9" value="0" id="quant"/></li>
+					<li><label for="IGN">Author:</label></br><input id="author" type="text" placeholder="GuideHax2OP"/></li>
+					<li><label for="game">Game:</label></br><select id="game">
+						<option value="default">Select a game</option>
+						<option value="LoL">League of legends</option>
+						<option value="WoW">World of Warcraft</option>
+						<option value="Skyrim">Skyrim</option>
+						<option value="MC">Minecraft</option>
+						<option value="TQ">Titan Quest</option>
+					</select></li>
+					<li id="TS" ><label for="type"></label></br><select id="type">
+					</select></li>
 				</ol>
 			</fieldset>
-			<fieldset>
-				<legend>Guide Section</legend>
-				<ul id="guide">
-					<li><label for="explain">Rune Set Guide:</label><br/><textarea id="explain" placeholder="*Type your guide for this rune set*"></textarea></li>
-					<li><label for="date">Date Added:</label><input type="date" id="date" placeholder="yyyy-mm-dd"/></li>
-				</ul>
-			</fieldset>
-					<div id="sub">
-					<input type="submit" id="add" value="Add Runes"/>
-					</div>
 		</form>
 		<script src="JS/json.js" type="text/javascript"></script>
-		<script src="JS/main.js" type="text/javascript"></script>
+<!--		<script src="JS/main.js" type="text/javascript"></script>-->
 	</body>
 </html>

@@ -1,6 +1,6 @@
 // Russell Carlin
-// VFW 1/12
-// Project 4
+// MIU 1202
+// Project 1
 window.addEventListener("DOMContentLoaded", function () {
     var runes = {
         mark: ["Alacrity - 1.7% AS", "Desolation - 1.66 APen", "Destruction - 1 APen, .57 MPen", "Focus - .16% CD", "Force - .1 AP/lvl", "Fortitude - 3.47 HP", "Furor - 2.23% CritD", "Insight - .95 MPen", "Intellect - 5.91 MP", "Knowledge - 1.17 MP/lvl", "Malice - .93% CritC", "Might - .13 AD/lvl", "Potency - .59 AP", "Replenishment - .26 Mregen/5", "Resilience - .91 Armor", "Shielding - .07 MR/lvl", "Strength - .95 AD", "Vitality - .54 HP/lvl", "Warding - .97 MR"],
@@ -12,14 +12,6 @@ window.addEventListener("DOMContentLoaded", function () {
         var e = document.getElementById(id);
         return e;
     }
-    function getRuneCategory() {
-            var c = document.forms[0].runeCat;
-            for (var i=0, l=c.length; i<l; i++) {
-                if(c[i].checked) {
-                    runeCat = c[i].value;
-                };
-            };
-        };
     function toggle(x) {
         switch(x){
             case "on":
@@ -39,7 +31,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 return false;
         }
     }
-    function runeSelection() {
+    function gameSelect() {
         if(runeCat === "Mark"){
             popSelect(runes.mark);
             showPic("Mark");
@@ -69,10 +61,6 @@ window.addEventListener("DOMContentLoaded", function () {
         function showPic(x) {
             pic.setAttribute("src", "Images/" + x +".png");
         };
-    };
-    function showQuant() {
-        var q = ge("quant").value;
-        ge("showQuant").innerHTML = "Quantity: " + q
     };
     function showCheck () {
         if (localStorage.length === 0) {
@@ -127,13 +115,6 @@ window.addEventListener("DOMContentLoaded", function () {
         };
         toggle("on");
     };
-    function getImage (catPic, makeSubList) {
-        var picLi = document.createElement("li");
-        makeSubList.appendChild(picLi);
-        var newPic = document.createElement("img");
-        var src = newPic.setAttribute("src", "Images/" + catPic +".png");
-        picLi.appendChild(newPic);
-    };
     function createButtons(key, buttonsLi) {
         var editButton = document.createElement("a");
         editButton.href = "#";
@@ -154,111 +135,74 @@ window.addEventListener("DOMContentLoaded", function () {
         buttonsLi.appendChild(deleteButton);
         buttonsLi.style.margin = "0px 0px 10px 0px";
     };
-    function clearRunes() {
+    function clearGuides() {
         if(localStorage.length === 0) {
-            alert("There are no runes saved.")
+            alert("You currently have no saved guides.")
         } else {
             localStorage.clear();
-            alert("Cleared saved runes.")
+            alert("Cleared saved guides.")
             window.location.reload();
         };
     };
-    function editRunes () {
+    function addGuide() {
+        var id = Math.floor(Math.random()*100000000);
+        var guide = {};
+            guide.author    = ["Guide author", ge("author").value]
+            guide.game      = ["Game", ge("type").value];
+            guide.type      = ["Guide type", ge("type").value];
+            guide.content   = ["Content", ge("content").value];
+            guide.date      = ["Date Added", ge("date").value];
+        localStorage.setItem(id, JSON.stringify(rune))
+        alert("Guide Saved!")
+        document.location.reload();
+    };
+    function editGuide () {
         ge("nav").style.display = "none";
         var value = localStorage.getItem(this.key);
-        var rune = JSON.parse(value);
+        var guide = JSON.parse(value);
         toggle("off");
-        ge("secTitle").value     = rune.sec[1]
-        ge("quant").value  = rune.amount[1]
-        ge("explain").value = rune.explain[1]
-        ge("date").value    = rune.date[1]
-        var rad = document.forms[0].runeCat;
-        if(rune.cat[1] === "Mark"){
-            rad[0].setAttribute("checked", "checked");
-        } else {
-            if(rune.cat[1] === "Seal"){
-                rad[1].setAttribute("checked", "checked");
-            } else {
-                if(rune.cat[1] === "Glyph") {
-                    rad[2].setAttribute("checked", "checked");
-                } else {
-                    if(rune.cat[1] === "Quintessence"){
-                        rad[3].setAttribute("checked", "checked");
-                    };
-                };
-            };
-        };
-        getRuneCategory();
-        runeSelection();
-        ge("runeType").value = rune.type[1]
-        ge("add").value = "Save Edit";
+        ge("author").value  = guide.author[1]
+        ge("game").value    = guide.game[1]
+        ge("type").value    = guide.type[1]
+        ge("content").value = guide.content[1]
+        ge("date").value    = guide.date[1]
+        ge("add").value     = "Save Edit";
         currentKey = (this.key)
     };
-    function addRunes() {
-        var id = Math.floor(Math.random()*100000000);
-        var rune = {};
-            rune.sec     = ["Section Title", ge("secTitle").value]
-            rune.cat     = ["Rune Catagory", runeCat];
-            rune.type    = ["Rune Type", ge("runeType").value];
-            rune.amount  = ["Amount", ge("quant").value];
-            rune.explain = ["Explaination", ge("explain").value];
-            rune.date    = ["Date Added", ge("date").value];
-        localStorage.setItem(id, JSON.stringify(rune))
-        alert("Runes Saved!")
-        var rs = ge("runeType");
-        document.location.reload();
-        document.forms[0].reset();
-        runeCat = "";
-        rs.options.length = 0;
-        rs.options[0] = new Option("*Select a rune category*", "selectCat");
-    };
-    function deleteRunes () {
-        var ask = confirm("Delete this rune set?");
+    function deleteGuide () {
+        var ask = confirm("Delete this guide?");
         if (ask) {
             localStorage.removeItem(this.key);
             window.location.reload();
         } else {
-            alert("Rune set not deleted.")
+            alert("guide not deleted.")
         };
     };
     function valiData(e) {
-        var st = ge("secTitle"),
-            ex = ge("explain"),
+        var ga = ge("author"),
+            ct = ge("content"),
             da = ge("date"),
-            rc = ge("runeCat"),
-            el = ge("errorList"),
-            vd = /^(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/;
+            el = ge("errorList");
             el.innerHTML = "";
-            st.style.border = "1px solid black";
-            rc.style.border = "none";
-            ex.style.border = "1px solid black";
+            ga.style.border = "1px solid black";
+            ct.style.border = "1px solid black";
             da.style.border = "1px solid black";
-        if (st.value === "") {
+        if (ga.value === "") {
             var titleError = "Please give a section title";
-            st.style.border = "2px solid red";
+            ga.style.border = "2px solid red";
             errors.push(titleError);
         }
-        if (runeCat === "") {
-            var catError = "Please select a rune category";
-            rc.style.border = "2px solid red";
-            errors.push(catError);
-        }
         if (ex.value === "") {
-            var explainError = "Please give a rune explaination";
+            var contentError = "Please give a rune explaination";
             ex.style.border = "2px solid red";
-            errors.push(explainError);
-        }
-        if (!(vd.exec(da.value))) {
-            var dateError = "Please use a valid date: yyyy-mm-dd";
-            da.style.border = "2px solid red";
-            errors.push(dateError);
+            errors.push(contentError);
         }
         if (errors.length === 0) {
             if (ge("add").value === "Save Edit") {
                 localStorage.removeItem(currentKey);
-                addRunes();
+                addGuide();
             } else {
-                addRunes();
+                addGuide();
             };
         } else {
             showErrors();
@@ -274,16 +218,12 @@ window.addEventListener("DOMContentLoaded", function () {
         };
         errors = [];
     };
-    var popt = ge("runeCat"),
-        runeCat = ""
-    popt.addEventListener("click", getRuneCategory);
-    popt.addEventListener("click", runeSelection);
-    var su = ge("quant");
-    su.addEventListener("change", showQuant);
+    var game = ge("runeCat");
+    game.addEventListener("click", gameSelect);
     var sr = ge("show");
     sr.addEventListener("click", showCheck);
-    var cr = ge("clear");
-    cr.addEventListener("click", clearRunes);
+    var cg = ge("clear");
+    cg.addEventListener("click", clearGuides);
     var ar = ge("add");
     ar.addEventListener("click", valiData);
     var errors = [],

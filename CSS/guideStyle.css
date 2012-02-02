@@ -1,0 +1,27 @@
+/*
+ Russell Carlin
+ MIU 1202
+ Project 1
+*/
+html {
+    background: #999999;
+}
+body {
+    color: #333333;
+}
+#logo {
+    padding: 5px 3px 0px 3px;
+}
+h1 {
+    text-align:center;
+    font: bold 30px/1em garamond;
+    border-bottom: solid 2px #666666;
+}
+p {
+    padding: 0px 5px;
+    text-align: center;
+    font: 13px/1em garamond;
+}
+#TS {
+    display: none;
+}
