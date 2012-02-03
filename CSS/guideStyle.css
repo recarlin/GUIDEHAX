@@ -66,3 +66,16 @@ textarea {
     padding: 1px;
     width: 80px;
 }
+#ser {
+    background: #777777;
+    border: solid 2px #666666;
+    border-radius: 10px;
+    padding: 3px;
+}
+#searchBox {
+    width: 219px;
+}
+#bro {
+    padding-bottom: 5px;
+    border-bottom: solid 2px #666666;
+}

@@ -26,11 +26,7 @@ p {
 #searchBox {
     width: 219px;
 }
-#start {
-    font: 24px/1em garamond;
-    margin: 0px 40px 5px 40px;
-    background: #444444;
-}
+
 #CTA {
     border: solid 2px #666666;
     border-radius: 10px;
@@ -51,7 +47,7 @@ h3 {
     margin: 5px 0px 5px 0px;
     padding: 0px 5px;
 }
-a {
+#l, #w, #s, #m, #t, #start {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -62,6 +58,11 @@ a {
     border-radius: 10px;
     margin: 5px;
     padding: 5px 0px;
+}
+#start {
+    font: 24px/1em garamond;
+    margin: 0px 40px 5px 40px;
+    background: #444444;
 }
 #bro {
     padding-bottom: 5px;
