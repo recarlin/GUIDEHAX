@@ -47,7 +47,7 @@ h3 {
     margin: 5px 0px 5px 0px;
     padding: 0px 5px;
 }
-#l, #w, #s, #m, #t, #start {
+#l, #w, #s, #m, #t, #start, #l1, #l2 {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -67,4 +67,12 @@ h3 {
 #bro {
     padding-bottom: 5px;
     border-bottom: solid 2px #666666;
+}
+#l1, #l2 {
+    display: inline-block;
+    width: 120px;
+    margin: 5px;
+}
+#ghl {
+    text-align: center;
 }
