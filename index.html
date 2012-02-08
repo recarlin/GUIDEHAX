@@ -26,11 +26,12 @@
 </head>
 <body>
 	
-	<div data-role="page" id="Home">
-		<div data-role="header" style="text-align:center">
-			<img width="150px" id="logo" src="Images/GuideHax.png"/>
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>Home</h1>
 		</div>
 		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
 			<h2>Start Your Guide</h2>
 			<p>Create guides to any of your favorite games!</p>
 			<a href="#builder" data-role="button" title="Click to Start">Click to Start</a>
@@ -42,50 +43,82 @@
 		<div>
 			<h3 style="margin:15px 5px 0px 5px">Browse guides:</h3>
 			<div style="margin:5px" data-role="controlgroup">
-				<a href="#browse" data-role="button">League of Legends</a>
-				<a href="#browse" data-role="button">World of Warcraft</a>
-				<a href="#browse" data-role="button">Minecraft</a>
-				<a href="#browse" data-role="button">Skyrim</a>
-				<a href="#browse" data-role="button">Titan Quest</a>
+				<a href="#goodBrowse" data-role="button">League of Legends</a>
+				<a href="#goodBrowse" data-role="button">World of Warcraft</a>
+				<a href="#goodBrowse" data-role="button">Minecraft</a>
+				<a href="#goodBrowse" data-role="button">Skyrim</a>
+				<a href="#goodBrowse" data-role="button">Titan Quest</a>
 			</div>
 		</div>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="builder">
-		<div data-role="header" style="text-align:center">
-			<img width="150px" id="logo" src="Images/GuideHax.png"/>
+	<div data-role="page" id="builder">
+		<div data-role="header" data-position="inline">
+			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
+			<h1>Right Browser</h1>
 		</div>
-		<h1>Guide Builder</h1>
-		<p id="txt">Follow the steps below to create your very own guide.</p>
-		<nav id="nav">
-			<a data-role="button" data-inline="true" href="#builder" id="addMore" style="display:none">Make new guide</a>
-			<a data-role="button" data-inline="true" href="#" id="show">Show guides</a>
-			<a data-role="button" data-inline="true" href="#" id="clear">Clear guides</a>
-		</nav>
+		<div style="text-align: center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+			<p id="txt">Follow the steps below to create your very own guide.</p>
+		</div>
 			<ul id="errorList"></ul>
 		<form action="#" method="post">
-			<fieldset style="margin:5px">
-					<label id="a" for="IGN">Author:</label></br><input id="author" type="text" placeholder="GuideHax2OP"/>
-					<label id="b" for="game">Game:</label></br><select id="game">
-						<option value="default">Select a game</option>
-						<option value="LoL">League of legends</option>
-						<option value="WoW">World of Warcraft</option>
-						<option value="Skyrim">Skyrim</option>
-						<option value="TQ">Titan Quest</option>
-					</select>
-					<label for="type">Type:</label></br><select id="type">
-						<option value="default">Select game for options</option>
-					</select>
-					<label id="c" for="content">Content:</label></br><textarea id="content" placeholder="Type your guide here"></textarea>
-			</fieldset>
+			<div data-role="fieldcontain" style="margin:5px">
+				<label id="a" for="IGN">Author:</label>
+				<input id="author" type="text" placeholder="GuideHax2OP"/>
+				
+				<label id="b" for="game">Game:</label>
+				<select id="game">
+					<option value="default">Select a game</option>
+					<option value="LoL">League of legends</option>
+					<option value="WoW">World of Warcraft</option>
+					<option value="Skyrim">Skyrim</option>
+					<option value="TQ">Titan Quest</option>
+				</select>
+				
+				<label for="type">Type:</label>
+				<select id="type">
+					<option value="default">Select game for options</option>
+				</select>
+				
+				<label id="c" for="content">Content:</label>
+				<textarea id="content" placeholder="Type your guide here"></textarea>
+			</div>
+			<input type="reset" value="Reset Form"/>
 			<input type="submit" id="add" value="Save guide"/>
 		</form>
 	</div>
 	
-	<div data-role="page" id="browse">
-		
+	<div data-role="page" data-add-back-btn="true" id="goodBrowse">
+		<div data-role="header" data-position="inline">
+			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
+			<h1>Right Browser</h1>
+			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" href="#badBrowse">Swap</a>
+		</div>
+		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-filter="true">
+				<li>
+		</div>
 	</div>
-	     
+	
+	<div data-role="page" data-add-back-btn="true" id="badBrowse">
+		<div data-role="header" data-position="inline">
+			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
+			<h1>Wrong Browser</h1>
+			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" href="#goodBrowse">Swap</a>
+		</div>
+		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+		</div>
+		<div style="margin:-10px 5px 5px 5px">
+			<label for="search"><h3 style="margin:15px 5px 0px 0px">Search Guides:</h3></label>
+			<input type="search" name="search" id="search" value="" />
+		</div>
+	</div>
+	
 	<script src="JS/json.js" type="text/javascript"></script>
 	<script src="JS/main.js" type="text/javascript"></script>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
