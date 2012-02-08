@@ -64,12 +64,15 @@
 			<ul id="errorList"></ul>
 		<form action="#" method="post">
 			<div data-role="fieldcontain" style="margin:5px">
-				<label id="a" for="IGN">Author:</label>
-				<input id="author" type="text" placeholder="GuideHax2OP"/>
+				<label for="IGN">Author:</label>
+				<input id="author" type="text"/>
 				
-				<label id="b" for="game">Game:</label>
-				<select id="game">
-					<option value="default">Select a game</option>
+				<label for="title">Title:</label>
+				<input id="title" type="text"/>
+				
+				<label  for="game">Game:</label>
+				<select id="game" data-native-menu="false">
+					<option data-placeholder="true" value="default">Select Game</option>
 					<option value="LoL">League of legends</option>
 					<option value="WoW">World of Warcraft</option>
 					<option value="Skyrim">Skyrim</option>
@@ -77,8 +80,8 @@
 				</select>
 				
 				<label for="type">Type:</label>
-				<select id="type">
-					<option value="default">Select game for options</option>
+				<select id="type" data-native-menu="false">
+					<option data-placeholder="true" value="default">Select Type</option>
 				</select>
 				
 				<label id="c" for="content">Content:</label>
@@ -89,7 +92,7 @@
 		</form>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="goodBrowse">
+	<div data-role="page" id="goodBrowse">
 		<div data-role="header" data-position="inline">
 			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
 			<h1>Right Browser</h1>
@@ -99,12 +102,13 @@
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-filter="true">
-				<li>
+			<ul id="guides" data-role="listview" data-filter="true">
+			</ul>
 		</div>
+		     <a href="#" id="clear" data-role="button">Clear</a>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="badBrowse">
+	<div data-role="page" id="badBrowse">
 		<div data-role="header" data-position="inline">
 			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
 			<h1>Wrong Browser</h1>
@@ -119,9 +123,16 @@
 		</div>
 	</div>
 	
-	<script src="JS/json.js" type="text/javascript"></script>
-	<script src="JS/main.js" type="text/javascript"></script>
+	<div data-role="page" id="details">
+		<div data-role="header" data-position="inline">
+			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
+			<h1>Right Browser</h1>
+			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" href="#badBrowse">Swap</a>
+		</div>
+	</div>
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
-</body>
+	<script src="JS/json.js" type="text/javascript"></script>
+	<script src="JS/main.js" type="text/javascript"></script>
+	</body>
 </html>
