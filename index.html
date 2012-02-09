@@ -25,6 +25,34 @@
 
 </head>
 <body>
+	<div data-role="page" data-add-back-btn="true" id="detail">
+		<div data-role="header">
+			<h1>Selector</h1>
+		</div>
+		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+			<h2>Select an application</h2>
+			<p>To change from good and bad, click the swap button in the headers.</p>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a data-role="button" href="#gHome">Good</a>
+				</div>
+				<div class="ui-block-b">
+					<a data-role="button" href="#bHome">Bad</a>
+				</div>
+				<div class="ui-block-a">
+					<a data-role="button" href="#gHome">Repository</a>
+				</div>
+				<div class="ui-block-b">
+					<a data-role="button" href="#bHome">GH-Pages</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
 	<div data-role="page" id="gHome">
 		<div data-role="header">
 			<h1>Good Home</h1>
@@ -245,21 +273,6 @@
 					</li>
 				</ul></li>
 			</ul>
-		</div>
-	</div>
-	
-	<div data-role="page" data-add-back-btn="true" id="detail">
-		<div data-role="header">
-			<h1>Browser</h1>
-			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#gHome">Home</a>
-		</div>
-		<div style="text-align:center">
-				<img width="300px" id="logo" src="Images/GuideHax.png"/>
-		</div>
-		<div data-role="content">
-			<h3>Guide Title</h3>
-			<h4>by TheLawGivah</h4>
-			<p>This will dynamically update to display the content of the guide, hopefully, next week.</p>
 		</div>
 	</div>
 	
