@@ -25,10 +25,10 @@
 
 </head>
 <body>
-	
-	<div data-role="page" id="home">
+	<div data-role="page" id="gHome">
 		<div data-role="header">
-			<h1>Home</h1>
+			<h1>Good Home</h1>
+			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Swap</a>
 		</div>
 		<div style="text-align:center">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
@@ -43,23 +43,287 @@
 		<div>
 			<h3 style="margin:15px 5px 0px 5px">Browse guides:</h3>
 			<div style="margin:5px" data-role="controlgroup">
-				<a href="#goodBrowse" data-role="button">League of Legends</a>
-				<a href="#goodBrowse" data-role="button">World of Warcraft</a>
-				<a href="#goodBrowse" data-role="button">Minecraft</a>
-				<a href="#goodBrowse" data-role="button">Skyrim</a>
-				<a href="#goodBrowse" data-role="button">Titan Quest</a>
+				<a href="#LoL" data-role="button">League of Legends</a>
+				<a href="#WoW" data-role="button">World of Warcraft</a>
+				<a href="#Sky" data-role="button">Skyrim</a>
+				<a href="#TQ" data-role="button">Titan Quest</a>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" data-add-back-btn="true" id="LoL">
+		<div data-role="header">
+			<h1>League of Legends</h1>
+			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#gHome">Home</a>
+		</div>
+		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+			<h2>Browse Guides</h2>
+		</div>
+	
+	<div data-role="page" id="bHome">
+		<div data-role="header">
+			<h1>Bad Home</h1>
+			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#gHome">Swap</a>
+		</div>
+		<div style="text-align:center">
+			<img width="300px" id="logo" src="Images/GuideHax.png"/>
+			<h2>Start Your Guide</h2>
+			<p>Create guides to any of your favorite games!</p>
+			<a href="#builder" data-role="button" title="Click to Start">Click to Start</a>
+		</div>
+		<div data-role="content">
+			<h3>Browse guides:</h3>
+			<div data-role="collapsible-set">
+				<ul data-role="listview" data-filter="true">
+					<div data-role="collapsible">
+						<h4>League of Legends</h4>
+						<div data-role="collapsible-set">
+							<div data-role="collapsible">
+								<h4>Bruiser</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Best Bruiser Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">A bruiser is any character that has good base defenses, a large amount of base damage, and built in sustain. They are almost always good with the basic Metagolem build, including a steroid spell that resets the attack timer.</p>
+									</div>
+									<div data-role="collapsible">
+										<h4>Strange Bruiser - 745 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p>Lichbane, Abyssal, and Hourglass! GO!</p>
+									</div>
+									<div data-role="collapsible">
+										<h4>Baddie Bruiser Guide - 600 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p>Stack Doran's Rings.</p>
+									</div>
+									<div data-role="collapsible">
+										<h4>dis my guide bruise guy - 3 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p>this is really dumb</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>AP Carry</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>AP Carry Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Build ability power and cast spells on your enemies.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>AD Carry</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>AD Carry Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Build attack damage and auto attack enemies.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Support</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Support Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Build gold/5 items and let your AD carry farm.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Jungle</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Jungle Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Get armor and lifesteal to survive the jungle. Gank when needed.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-role="collapsible">
+						<h4>World of Warcraft</h4>
+						<div data-role="collapsible-set">
+							<div data-role="collapsible">
+								<h4>Mage</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Complete Mage - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Intelligence is your main stat. Frost and arcane are best for PvP, while Fire is great for PvE.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Rogue</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Assassination Rogue - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Agility is key and so are some good daggers.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Shaman</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Enhancement Shaman - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Get items focusing on strength and agility. Also, keep track of your totems.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Priest</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Holy Priest - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Be sure to watch everyone's HP, not just the tanks.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Warrior</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Arms Warrior - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Strength, strength, and more strength! A really high-end 2-hander is all you need.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-role="collapsible">
+						<h4>Skyrim</h4>
+						<div data-role="collapsible-set">
+							<div data-role="collapsible">
+								<h4>Caster</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Caster Character - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Casters can be tricky if you get into melee. You are very weak, so kite them around.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Melee</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Melee Character - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">If you like blocking, you will want to go 2-hander. For full damage, two 1-handers.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Ranger</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Ranged Character - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Bows work great with stealth! Long range sneak attacks are always fun.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Stealth</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Stealth Character - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Get a good dagger and go enchanting. You can get a huge multiplier on your stealth attacks!</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Tank</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Tank Character - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Pump all your stats into health, heavy armor, and blacksmithing. Laugh as no one can touch you.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-role="collapsible">
+						<h4>Titan Quest</h4>
+						<div data-role="collapsible-set">
+							<div data-role="collapsible">
+								<h4>Warfare</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Warfare Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">One of the best skill trees in the game because of the Dual Wield. Very powerful in any form!</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Hunting</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Hunting Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">This skill tree is all about piercing! Either a bow or a spear should be your choice weapon.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Rogue</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Rogue Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">A great skill tree to join with hunting or warfare, both making some of the most damage in the game.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Storm</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Storm Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">Lightning Bolt is great for bosses and Lightning Ball is great for crowds.</p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible">
+								<h4>Dream</h4>
+								<div data-role="collapsible-set">
+									<div data-role="collapsible">
+										<h4>Dream Guide - 1000 rating</h4>
+										<p>Author: TheLawGivah</p></br>
+										<p style="white-space: normal">The Nightmare is only really effective with other pets. Other than that, get a trance and Psonic Touch for great damage.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ul>
 			</div>
 		</div>
 	</div>
 	
 	<div data-role="page" id="builder">
 		<div data-role="header" data-position="inline">
-			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
-			<h1>Right Browser</h1>
+			<a data-role="button" href="#gHome" data-direction="reverse" data-icon="home">Home</a>
+			<h1>Guide Builder</h1>
 		</div>
 		<div style="text-align: center">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<p id="txt">Follow the steps below to create your very own guide.</p>
+			<p id="txt">Use the form to create your very own guide!</p>
 		</div>
 			<ul id="errorList"></ul>
 		<form action="#" method="post">
@@ -92,7 +356,7 @@
 		</form>
 	</div>
 	
-	<div data-role="page" id="goodBrowse">
+	<!--<div data-role="page" id="goodBrowse">
 		<div data-role="header" data-position="inline">
 			<a data-role="button" href="#home" data-direction="reverse" data-icon="home">Home</a>
 			<h1>Right Browser</h1>
@@ -129,7 +393,7 @@
 			<h1>Right Browser</h1>
 			<a data-role="button" data-transition="slidedown" data-icon="star" data-iconpos="right" href="#badBrowse">Swap</a>
 		</div>
-	</div>
+	</div>-->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
 	<script src="JS/json.js" type="text/javascript"></script>
