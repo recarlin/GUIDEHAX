@@ -2,6 +2,11 @@
 // MIU 1202
 // Project 1
 $(document).ready(function(){
+    $(':jqmData(url^=index.html)').live('pagebeforecreate', 
+  function(event) {
+    $(this).filter(':jqmData(url*=ui-page)').find(':jqmData(role=header)')
+      .prepend('<a href="#" data-rel="back" data-icon="back">Back</a>')
+  });
     $("#clear").bind("click", function(){
         if(localStorage.length != 0) {
             localStorage.clear();
