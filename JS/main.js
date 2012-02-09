@@ -18,6 +18,10 @@ $(document).ready(function(){
      window.location=$(this).find("a").attr("href");
      return false;
     });
+    $("#clickMC").click(function(){
+     window.location=$(this).find("a").attr("href");
+     return false;
+    });
     //$("#clear").bind("click", function(){
     //    if(localStorage.length != 0) {
     //        localStorage.clear();
