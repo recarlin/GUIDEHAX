@@ -1,6 +1,12 @@
 // Russell Carlin
 // MIU 1202
 // Project 1
+var types = {
+        LoL:["Bruiser", "AP Carry", "AD Carry", "Support", "Jungle"],
+        WoW:["Death Knight", "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"],
+        Skyrim:["Caster", "Melee", "Ranger", "Stealth", "Tank"],
+        TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warfare"]
+    };
 $(document).ready(function(){
     $("#clickLoL").click(function(){
      window.location=$(this).find("a").attr("href");
@@ -22,6 +28,15 @@ $(document).ready(function(){
      window.location=$(this).find("a").attr("href");
      return false;
     });
+    $("#game").change(function(){
+        function popType(x) {
+            var gt = $("#type");
+            gt.options.length = 0
+            for(index in types[x]) {
+                gt.options[gt.options.length] = new Option(types[x][index], types[x][index]);
+            };
+        };
+    };
     //$("#clear").bind("click", function(){
     //    if(localStorage.length != 0) {
     //        localStorage.clear();
@@ -61,5 +76,4 @@ $(document).ready(function(){
     //        };
     //    };
     //    $("#guides").listview("refresh");
-    //});
-});
+    //});});
