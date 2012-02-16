@@ -7,7 +7,7 @@ var types = {
         Skyrim:["Caster", "Melee", "Ranger", "Stealth", "Tank"],
         MC: ["Redstone", "Builds", "Servers", "Textures", "Adventure"],
         TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warfare"]
-    };
+};
 $(document).ready(function(){
     
     $("#clickLoL").click(function(){
@@ -41,8 +41,14 @@ $(document).ready(function(){
         for(index in types[x]) {
         	$('#type').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
         };
-    $('#type').selectmenu('refresh', true);
+    	$('#type').selectmenu('refresh', true);
     });
     
-    $('#guideForm').validate()
-})
+    $('#guideForm').validate({
+    	invalidHandler: function(form, validator){},
+    	submitHandler: function(){
+    		alert("Guide saved!");
+    		location.reload();
+    	}
+    });
+});
