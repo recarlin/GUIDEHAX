@@ -723,11 +723,11 @@
 		</div>
 
 		<div data-role="content">
-			<form action="" method="post" id="guideForm">
+			<form action="" method="post" id="gGuideForm">
 
 					<div style="border-top:1px solid lightgray" data-role="fieldcontain">
 						<label for="game">Game:</label>
-						<select name="game" id="game" data-native-menu="false" class="required">
+						<select name="game" id="gGame" data-native-menu="false" class="required">
 							<option data-placeholder="true" value="">First, select a game</option>
 							<option value="LoL">League of legends</option>
 							<option value="WoW">World of Warcraft</option>
@@ -737,8 +737,8 @@
 						</select>
 						
 						<label for="type">Category:</label>
-						<select name="type" id="type" data-native-menu="false" class="required">
-							<option data-placeholder="true" value="">Then, select a category</option>
+						<select name="type" id="gType" data-native-menu="false" class="required">
+							<option id="default" data-placeholder="true" value="">Then, select a category</option>
 						</select>
 					</div>
 					
@@ -760,6 +760,25 @@
 						<input name="date" id="date" type="date" data-role="datebox" placeholder="Tap the button to select a date" data-options='{"mode": "calbox", "disableManualInput": true}'/>
 					</div>
 					
+					<div data-role="fieldcontain">
+						
+						<fieldset data-role="controlgroup">
+							<legend>More Options:</legend>
+							<input type="checkbox" value="elo" name="moreOptions" class="elo" id="elo"/>
+							<label for="elo">Display your ELO?</label>
+							<input checked="true" type="checkbox" value="public" name="moreOptions" id="public"/>
+							<label for="public">Share Publicly?</label>
+							<input checked="true" type="checkbox" value="comments" name="moreOptions" id="comments"/>
+							<label for="comments">Allow comments?</label>
+						</fieldset>
+					
+						<div id="gSlide" class="slide">
+							<label for="rating">Rating</label>
+							<input type="range" name="rating" id="rating" min="1000" max="2500" value="1520"/>
+							<div class="tooltip">Your in-game ELO</div>
+						</div>
+						
+					</div>					
 				<input type="submit" id="add" value="Save guide"/>
 			</form>
 		</div>
@@ -778,12 +797,12 @@
 		</div>
 
 		<div data-role="content">
-			<form action="" method="post" id="guideForm">
+			<form action="" method="post" id="bGuideForm">
 
 					<div style="border-top:1px solid lightgray" data-role="fieldcontain">
 						<label for="game">Game:</label>
-						<select name="game" id="game" data-native-menu="false" class="required">
-							<option data-placeholder="true" value="">First, select a game</option>
+						<select name="game" id="bGame" data-native-menu="false" class="required">
+							<option data-placeholder="true" value=""></option>
 							<option value="LoL">League of legends</option>
 							<option value="WoW">World of Warcraft</option>
 							<option value="Skyrim">Skyrim</option>
@@ -792,30 +811,54 @@
 						</select>
 						
 						<label for="type">Category:</label>
-						<select name="type" id="type" data-native-menu="false" class="required">
-							<option data-placeholder="true" value="">Then, select a category</option>
+						<select name="type" id="bType" data-native-menu="false" class="required">
+							<option id="default" data-placeholder="true" value=""></option>
 						</select>
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for="title">Guide Title:</label>
+						<label for="title">Title:</label>
 						<input name="title"id="title" type="text" class="required"/>
-						<div class="tooltip">Example: My Awesome Guide</div>
 						
-						<label for="author">Guide Author:</label>
+						<label for="author">Name:</label>
 						<input name=" author" id="author" type="text" class="required"/>
-						<div class="tooltip">Preferably, use in-game names</div>
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label id="c" for="content">Guide Content:</label>
-						<textarea id="content" placeholder="Please, type your guide" class="required"></textarea>
+						<textarea id="content" class="required"></textarea>
 						
-						<label for="date">Date Created:</label>
-						<input name="date" id="date" type="date" data-role="datebox" placeholder="Tap the button to select a date" data-options='{"mode": "calbox", "disableManualInput": true}'/>
+						<label for="date">Date:</label>
+						<input name="date" id="date" type="text" class="required date"/>
 					</div>
 					
-				<input type="submit" id="add" value="Save guide"/>
+					<div data-role="fieldcontain">
+						
+						<fieldset data-role="controlgroup">
+							<legend>More Options:</legend>
+							<input checked="true" type="checkbox" value="elo" name="moreOptions" class="elo" id="elo"/>
+							<label for="elo">Display rating?</label>
+							<input type="checkbox" value="public" name="moreOptions" id="public"/>
+							<label for="public">Share Publicly?</label>
+							<input type="checkbox" value="comments" name="moreOptions" id="comments"/>
+							<label for="comments">Allow comments?</label>
+						</fieldset>
+					
+						<div class="slide">
+							<label for="rating">Rating</label>
+							<input type="range" name="rating" id="rating" min="1000" max="2500" value="1000"/>
+						</div>
+						
+					</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<input type="reset" value="Reset"/>
+					</div>
+					<div class="ui-block-b">
+						<input type="submit" id="add" value="Save"/>
+					</div>
+				</div>
+				
 			</form>
 		</div>
 		

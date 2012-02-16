@@ -35,20 +35,50 @@ $(document).ready(function(){
      return false;
     });
    
-    $('select#game').change(function() {
-    	var x= $('#game').val()
-    	$('#type').find("option").remove()
+    $('#gGame').change(function() {
+    	var x= $('#gGame').val()
+    	$('#gType option').not("#default").remove()
         for(index in types[x]) {
-        	$('#type').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
+        	$('#gType').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
         };
-    	$('#type').selectmenu('refresh', true);
+    	$('#gType').selectmenu('refresh', true);
     });
     
-    $('#guideForm').validate({
+    $('#bGame').change(function() {
+    	var x= $('#bGame').val()
+    	$('#bType option').not("#default").remove()
+        for(index in types[x]) {
+        	$('#bType').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
+        };
+    	$('#bType').selectmenu('refresh', true);
+    });
+    
+    $('#gGuideForm').validate({
     	invalidHandler: function(form, validator){},
     	submitHandler: function(){
     		alert("Guide saved!");
     		location.reload();
     	}
+    });
+    
+    $('#bGuideForm').validate({
+    	invalidHandler: function(form, validator){
+    		alert("Error saving guide.");
+    		location.reload();
+    	},
+    	submitHandler: function(){
+    		alert("Guide saved!");
+    		location.reload();
+    	}
+    });
+    
+    $('#gSlide').hide();
+    
+    $('.elo').click(function(){
+	    if ($('.elo').is(':checked')){
+	    	$('.slide').show()
+    	} else {
+			$('.slide').hide()
+		};
     });
 });
