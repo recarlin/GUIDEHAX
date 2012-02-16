@@ -726,14 +726,17 @@
 			<form action="" method="post" id="guideForm">
 
 					<div style="border-top:1px solid lightgray" data-role="fieldcontain">
-						<select name="game-selection" id="game" data-native-menu="false">
+						<label for="game">Game:</label>
+						<select name="game" id="game" data-native-menu="false">
 							<option data-placeholder="true" value="default">First, select a game</option>
 							<option value="LoL">League of legends</option>
 							<option value="WoW">World of Warcraft</option>
 							<option value="Skyrim">Skyrim</option>
+							<option value="MC">Minecraft</option>
 							<option value="TQ">Titan Quest</option>
 						</select>
 						
+						<label for="type">Category:</label>
 						<select name="type" id="type" data-native-menu="false">
 							<option data-placeholder="true" value="default">Then, select a category</option>
 						</select>
@@ -741,17 +744,17 @@
 					
 					<div data-role="fieldcontain">
 						<label for="title">Guide Title:</label>
-						<input name="title"id="title" type="text"/>
+						<input name="title"id="title" type="text" class="required"/>
 						<div class="tooltip">Example: My Awesome Guide</div>
 						
 						<label for="author">Guide Author:</label>
-						<input name=" author" id="author" type="text"/>
+						<input name=" author" id="author" type="text" class="required"/>
 						<div class="tooltip">Preferably, use in-game names</div>
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label id="c" for="content">Guide Content:</label>
-						<textarea id="content" placeholder="Please, type your guide"></textarea>
+						<textarea id="content" placeholder="Please, type your guide" class="required"></textarea>
 						
 						<label for="date">Date Created:</label>
 						<input name="date" id="date" type="date" data-role="datebox" placeholder="Tap the button to select a date" data-options='{"mode": "calbox", "disableManualInput": true}'/>
@@ -783,6 +786,7 @@
 					<option value="LoL">League of legends</option>
 					<option value="WoW">World of Warcraft</option>
 					<option value="Skyrim">Skyrim</option>
+					<option value="MC">Minecraft</option>
 					<option value="TQ">Titan Quest</option>
 				</select>
 				
@@ -792,14 +796,14 @@
 				</select>
 
 				<label for="title">Guide Title:</label>
-				<input name="title"id="title" type="text" placeholder="please t"/>
+				<input name="title"id="title" type="text" placeholder="please t" class="required"/>
 				<p>e.g. My Awesome Guide</p>
 				
 				<label for="author">Author:</label>
-				<input name=" author" id="author" type="text" placeholder="please type your name"/>
+				<input name=" author" id="author" type="text" placeholder="please type your name" class="required"/>
 				
 				<label id="c" for="content">Content:</label>
-				<textarea id="content" placeholder="please type your guide"></textarea>
+				<textarea id="content" placeholder="please type your guide" class="required"></textarea>
 				
 				<label for="date">Date Created:</label>
 				<input name="date" id="date" type="date" data-role="datebox" placeholder="click button to select a date" data-options='{"mode": "calbox", "disableManualInput": true}'/>
