@@ -13,10 +13,13 @@ $(document).ready(function(){
 
 	$.mobile.page.prototype.options.addBackBtn=true;
 
+	/*
+$('#gHome').live('pageLoad', function(){
+		var logoHTML='<div class="logoImage"><img width="300px" id="logo" src="Images/GuideHax.png"/></div>';
+		$('.ui-page&ui-body-null).before(logoHTML);
+	});
+*/
 	
-	var logoHTML='<div class="logoImage"><img width="300px" id="logo" src="Images/GuideHax.png"/></div>';
-	$('.ui-page&ui-body-null.ui-content').before(logoHTML);
-		/* $('.ui-content').before(logoHTML) */
 
     $('#clickLoL').click(function(){
      window.location=$(this).find('a').attr('href');

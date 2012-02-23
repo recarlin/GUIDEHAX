@@ -9,11 +9,38 @@
 	margin-left: 15px;
 	font-size: 14px 
 }
+
 .logoImage, .centerText{
 	text-align: center;
 }
+
 label.error{
 	color: red;
 }
-.ui-li-divider{
+
+.ui-page{
+	background-image: -webkit-linear-gradient(#777, #444);
 }
+
+#CTA{
+	width: 300px;
+	height: 200px;
+	background: url('../images/CTA.PNG');
+	background-size: 100%;
+	position: relative;
+}
+
+#startButton{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 95%;
+}
+
+.ui-content {
+	color: white;
+}
+
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+font-family: Lucida Grande,Arial,sans-serif;
+
