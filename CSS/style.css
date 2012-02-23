@@ -18,29 +18,35 @@ label.error{
 	color: red;
 }
 
+/*
 .ui-page{
 	background-image: -webkit-linear-gradient(#777, #444);
 }
+*/
 
-#CTA{
-	width: 300px;
+#gCTA, #bCTA{
+	width: 290px;
 	height: 200px;
 	background: url('../images/CTA.PNG');
 	background-size: 100%;
+	background-repeat: no-repeat;
 	position: relative;
 }
 
 #startButton{
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 95%;
+	bottom: 5px;
+	left: 5px;
+	width: 270px;
 }
 
+/*
 .ui-content {
-	color: white;
+	color: #660000;
 }
 
 .ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
-font-family: Lucida Grande,Arial,sans-serif;
-
+	font-family: Lucida Grande,Arial,sans-serif;
+	text-shadow: 0 1px 0 black;
+}
+*/

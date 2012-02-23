@@ -18,15 +18,16 @@
 	
 	<meta http-equiv="cleartype" content="on"/>
 	
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css"/>
+	<link rel="stylesheet" href="CSS/GuideHax.min.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css" /> 
 	<link rel="stylesheet" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.css"/>
-	<link href="CSS/style.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="CSS/style.css"/>
 
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
-	<div data-role="page" id="selector"class="mPage">
+	<div data-role="page" id="selector" class="mPage">
 		<div data-role="header">
 			<h1>Selector</h1>
 		</div>
@@ -67,7 +68,7 @@
 		</div>
 		
 		<div data-role="content">
-			<div id="CTA" class="centerText">
+			<div id="gCTA" class="centerText">
 				<a id="startButton" href="#gBuilder" data-role="button" title="Click to Start">Click to Start</a>
 			</div>
 		<h3>Browse guides:</h3>
@@ -338,10 +339,9 @@
 		</div>
 		
 		<div data-role="content">
-			<div class="centerText">
-				<h2>Start Your Guide</h2>
-				<p>Create guides to any of your favorite games!</p>
-				<a href="#bBuilder" data-role="button" title="Click to Start">Click to Start</a>
+			<div id="bCTA" class="centerText">
+				<a id="startButton" href="#gBuilder" data-role="button" title="Click to Start">Click to Start</a>
+			</div>
 			</div>
 			<h3>Browse guides:</h3>
 			<fieldset style="text-align:center" class="ui-grid-a">
