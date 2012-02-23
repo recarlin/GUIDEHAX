@@ -26,16 +26,19 @@
 
 </head>
 <body>
-	<div data-role="page" id="selector">
+	<div data-role="page" id="selector"class="mPage">
 		<div data-role="header">
 			<h1>Selector</h1>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Select an application</h2>
-			<p>To change from good and bad, click the swap button in the headers.</p>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Select an application</h2>
+				<p>To change from good and bad, click the swap button in the headers.</p>
+			</div>			
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
 					<a data-role="button" href="#gHome">Good</a>
@@ -53,7 +56,7 @@
 		</div>
 	</div>
 	
-	<div data-role="page" id="gHome">
+	<div data-role="page" id="gHome" class="mPage">
 		<div data-role="header">
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" href="#selector">Selector</a>
 			<h1>Good Home</h1>
@@ -61,11 +64,14 @@
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Start Your Guide</h2>
-			<p>Create guides to any of your favorite games!</p>
-			<a href="#gBuilder" data-role="button" title="Click to Start">Click to Start</a>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Start Your Guide</h2>
+				<p>Create guides to any of your favorite games!</p>
+				<a href="#gBuilder" data-role="button" title="Click to Start">Click to Start</a>
+			</div>
 		<h3>Browse guides:</h3>
 			<ul data-role="listview" data-inset="true" data-filter="true">
 				<li>
@@ -323,7 +329,7 @@
 		</div>
 	</div>
 	
-	<div data-role="page" id="bHome">
+	<div data-role="page" id="bHome" class="mPage">
 		<div data-role="header">
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" href="#selector">Selector</a>
 			<h1>Bad Home</h1>
@@ -331,11 +337,14 @@
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Start Your Guide</h2>
-			<p>Create guides to any of your favorite games!</p>
-			<a href="#bBuilder" data-role="button" title="Click to Start">Click to Start</a>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Start Your Guide</h2>
+				<p>Create guides to any of your favorite games!</p>
+				<a href="#bBuilder" data-role="button" title="Click to Start">Click to Start</a>
+			</div>
 			<h3>Browse guides:</h3>
 			<fieldset style="text-align:center" class="ui-grid-a">
 				<div id="clickTQ" class="ui-block-a">
@@ -371,16 +380,19 @@
 			</fieldset>
 		</div>
 	</div>
-	<div data-role="page" data-add-back-btn="true" id="LoL">
+	<div data-role="page" data-add-back-btn="true" id="LoL" class="mPage">
 		<div data-role="header">
 			<h1>Browser</h1>
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Home</a>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>League of Legends</h2>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>League of Legends</h2>
+			</div>
 		<ul data-filter="true" data-role="listview">
 			<li data-role="collapsible">
 				<h4>Bruiser</h4>
@@ -451,16 +463,19 @@
 		</div>
 	</div>
 		
-	<div data-role="page" data-add-back-btn="true" id="WoW">
+	<div data-role="page" data-add-back-btn="true" id="WoW" class="mPage">
 		<div data-role="header">
 			<h1>Browser</h1>
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Home</a>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>World of Warcraft</h2>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>World of Warcraft</h2>
+			</div>
 		<ul data-filter="true" data-role="listview">
 			<li data-role="collapsible">
 				<h4>Mage</h4>
@@ -516,16 +531,19 @@
 		</div>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="Sky">
+	<div data-role="page" data-add-back-btn="true" id="Sky" class="mPage">
 		<div data-role="header">
 			<h1>Browser</h1>
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Home</a>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Skyrim</h2>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Skyrim</h2>
+			</div>
 		<ul data-filter="true" data-role="listview">
 			<li data-role="collapsible">
 				<h4>Caster</h4>
@@ -581,16 +599,19 @@
 		</div>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="TQ">
+	<div data-role="page" data-add-back-btn="true" id="TQ" class="mPage">
 		<div data-role="header">
 			<h1>Browser</h1>
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Home</a>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Titan Quest</h2>
 		</div>
+		
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Titan Quest</h2>
+			</div>
 		<ul data-filter="true" data-role="listview">
 			<li data-role="collapsible">
 				<h4>Warfare</h4>
@@ -646,72 +667,75 @@
 		</div>
 	</div>
 	
-	<div data-role="page" data-add-back-btn="true" id="MC">
+	<div data-role="page" data-add-back-btn="true" id="MC" class="mPage">
 		<div data-role="header">
 			<h1>Browser</h1>
 			<a data-role="button" data-direction="reverse" data-icon="star" data-iconpos="right" class="ui-btn-right" href="#bHome">Home</a>
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Minecraft</h2>
 		</div>
+		
 		<div data-role="content">
-		<ul data-filter="true" data-role="listview">
-			<li data-role="collapsible">
-				<h4>Redstone</h4>
-				<ul data-role="collapsible-set">
-					<li data-role="collapsible">
-						<h4>Best Redstone - 1000 rating</h4>
-						<p>Author: TheLawGivah</p></br>
-						<p style="white-space: normal">This is how you make automatic doors.</p>
-					</li>
-				</ul>
-			</li>
-			<li data-role="collapsible">
-				<h4>Builds</h4>
-				<ul data-role="collapsible-set">
-					<li data-role="collapsible">
-						<h4>Best Build - 1000 rating</h4>
-						<p>Author: TheLawGivah</p></br>
-						<p style="white-space: normal">This city I built is amazing!</p>
-					</li>
-				</ul>
-			</li>
-			<li data-role="collapsible">
-				<h4>Servers</h4>
-				<ul data-role="collapsible-set">
-					<li data-role="collapsible">
-						<h4>Best Server - 1000 rating</h4>
-						<p>Author: TheLawGivah</p></br>
-						<p style="white-space: normal">My server is the best one!</p>
-					</li>
-				</ul>
-			</li>
-			<li data-role="collapsible">
-				<h4>Textures</h4>
-				<ul data-role="collapsible-set">
-					<li data-role="collapsible">
-						<h4>Best Textures - 1000 rating</h4>
-						<p>Author: TheLawGivah</p></br>
-						<p style="white-space: normal">Sweet texture pack!</p>
-					</li>
-				</ul>
-			</li>
-			<li data-role="collapsible">
-				<h4>Adventure</h4>
-				<ul data-role="collapsible-set">
-					<li data-role="collapsible">
-						<h4>Best Adventure - 1000 rating</h4>
-						<p>Author: TheLawGivah</p></br>
-						<p style="white-space: normal">My amazing adventure map! Try it out!</p>
-					</li>
-				</ul>
-			</li>
-		</ul>
+			<div class="centerText">
+				<h2>Minecraft</h2>
+			</div>
+			<ul data-filter="true" data-role="listview">
+				<li data-role="collapsible">
+					<h4>Redstone</h4>
+					<ul data-role="collapsible-set">
+						<li data-role="collapsible">
+							<h4>Best Redstone - 1000 rating</h4>
+							<p>Author: TheLawGivah</p></br>
+							<p style="white-space: normal">This is how you make automatic doors.</p>
+						</li>
+					</ul>
+				</li>
+				<li data-role="collapsible">
+					<h4>Builds</h4>
+					<ul data-role="collapsible-set">
+						<li data-role="collapsible">
+							<h4>Best Build - 1000 rating</h4>
+							<p>Author: TheLawGivah</p></br>
+							<p style="white-space: normal">This city I built is amazing!</p>
+						</li>
+					</ul>
+				</li>
+				<li data-role="collapsible">
+					<h4>Servers</h4>
+					<ul data-role="collapsible-set">
+						<li data-role="collapsible">
+							<h4>Best Server - 1000 rating</h4>
+							<p>Author: TheLawGivah</p></br>
+							<p style="white-space: normal">My server is the best one!</p>
+						</li>
+					</ul>
+				</li>
+				<li data-role="collapsible">
+					<h4>Textures</h4>
+					<ul data-role="collapsible-set">
+						<li data-role="collapsible">
+							<h4>Best Textures - 1000 rating</h4>
+							<p>Author: TheLawGivah</p></br>
+							<p style="white-space: normal">Sweet texture pack!</p>
+						</li>
+					</ul>
+				</li>
+				<li data-role="collapsible">
+					<h4>Adventure</h4>
+					<ul data-role="collapsible-set">
+						<li data-role="collapsible">
+							<h4>Best Adventure - 1000 rating</h4>
+							<p>Author: TheLawGivah</p></br>
+							<p style="white-space: normal">My amazing adventure map! Try it out!</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</div>
 			
-	<div data-role="page" id="gBuilder">
+	<div data-role="page" id="gBuilder" class="mPage">
 		<div data-role="header" data-position="inline">
 			<a data-role="button" href="#gHome" data-direction="reverse" data-icon="home">Home</a>
 			<h1>Good Builder</h1>
@@ -719,10 +743,12 @@
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<h2>Start your guide below</h2>
 		</div>
 
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Start your guide below</h2>
+			</div>
 			<form action="" method="post" id="gGuideForm">
 
 					<div style="border-top:1px solid lightgray" data-role="fieldcontain">
@@ -764,15 +790,15 @@
 						
 						<fieldset data-role="controlgroup">
 							<legend>More Options:</legend>
-							<input type="checkbox" value="elo" name="moreOptions" class="elo" id="elo"/>
-							<label for="elo">Display your ELO?</label>
+							<input type="checkbox" value="gELO" name="moreOptions" id="gELO"/>
+							<label for="gELO">Display your ELO?</label>
 							<input checked="true" type="checkbox" value="public" name="moreOptions" id="public"/>
 							<label for="public">Share Publicly?</label>
 							<input checked="true" type="checkbox" value="comments" name="moreOptions" id="comments"/>
 							<label for="comments">Allow comments?</label>
 						</fieldset>
 					
-						<div id="gSlide" class="slide">
+						<div id="gSlide">
 							<label for="rating">Rating</label>
 							<input type="range" name="rating" id="rating" min="1000" max="2500" value="1520"/>
 							<div class="tooltip">Your in-game ELO</div>
@@ -785,7 +811,7 @@
 		
 	</div>
 	
-	<div data-role="page" id="bBuilder">
+	<div data-role="page" id="bBuilder" class="mPage">
 		<div data-role="header" data-position="inline">
 			<a data-role="button" href="#bHome" data-direction="reverse" data-icon="home">Home</a>
 			<h1>Bad Builder</h1>
@@ -793,10 +819,12 @@
 		</div>
 		<div class="logoImage">
 			<img width="300px" id="logo" src="Images/GuideHax.png"/>
-			<p id="txt">Use the form to create your very own guide!</p>
 		</div>
 
 		<div data-role="content">
+			<div class="centerText">
+				<h2>Start your guide below</h2>
+			</div>
 			<form action="" method="post" id="bGuideForm">
 
 					<div style="border-top:1px solid lightgray" data-role="fieldcontain">
@@ -836,15 +864,15 @@
 						
 						<fieldset data-role="controlgroup">
 							<legend>More Options:</legend>
-							<input checked="true" type="checkbox" value="elo" name="moreOptions" class="elo" id="elo"/>
-							<label for="elo">Display rating?</label>
+							<input checked="true" type="checkbox" value="bELO" name="moreOptions" id="bELO"/>
+							<label for="gELO">Display rating?</label>
 							<input type="checkbox" value="public" name="moreOptions" id="public"/>
 							<label for="public">Share Publicly?</label>
 							<input type="checkbox" value="comments" name="moreOptions" id="comments"/>
 							<label for="comments">Allow comments?</label>
 						</fieldset>
 					
-						<div class="slide">
+						<div id="bSlide">
 							<label for="rating">Rating</label>
 							<input type="range" name="rating" id="rating" min="1000" max="2500" value="1000"/>
 						</div>

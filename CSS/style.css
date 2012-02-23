@@ -9,9 +9,11 @@
 	margin-left: 15px;
 	font-size: 14px 
 }
-.logoImage{
+.logoImage, .centerText{
 	text-align: center;
 }
 label.error{
 	color: red;
+}
+.ui-li-divider{
 }

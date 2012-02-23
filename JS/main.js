@@ -2,42 +2,50 @@
 // MIU 1202
 // Project 3
 var types = {
-        LoL:["Bruiser", "AP Carry", "AD Carry", "Support", "Jungle"],
-        WoW:["Death Knight", "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior"],
-        Skyrim:["Caster", "Melee", "Ranger", "Stealth", "Tank"],
-        MC: ["Redstone", "Builds", "Servers", "Textures", "Adventure"],
-        TQ: ["Earth", "Defense", "Dream", "Hunting", "Nature", "Rogue", "Spirit", "Storm", "Warfare"]
+        LoL:['Bruiser', 'AP Carry', 'AD Carry', 'Support', 'Jungle'],
+        WoW:['Death Knight', 'Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'],
+        Skyrim:['Caster', 'Melee', 'Ranger', 'Stealth', 'Tank'],
+        MC: ['Redstone', 'Builds', 'Servers', 'Textures', 'Adventure'],
+        TQ: ['Earth', 'Defense', 'Dream', 'Hunting', 'Nature', 'Rogue', 'Spirit', 'Storm', 'Warfare']
 };
+
 $(document).ready(function(){
-    
-    $("#clickLoL").click(function(){
-     window.location=$(this).find("a").attr("href");
+
+	$.mobile.page.prototype.options.addBackBtn=true;
+
+	
+	var logoHTML='<div class="logoImage"><img width="300px" id="logo" src="Images/GuideHax.png"/></div>';
+	$('.ui-page&ui-body-null.ui-content').before(logoHTML);
+		/* $('.ui-content').before(logoHTML) */
+
+    $('#clickLoL').click(function(){
+     window.location=$(this).find('a').attr('href');
      return false;
     });
     
-    $("#clickWoW").click(function(){
-     window.location=$(this).find("a").attr("href");
+    $('#clickWoW').click(function(){
+     window.location=$(this).find('a').attr('href');
      return false;
     });
     
-    $("#clickSky").click(function(){
-     window.location=$(this).find("a").attr("href");
+    $('#clickSky').click(function(){
+     window.location=$(this).find('a').attr('href');
      return false;
     });
     
-    $("#clickTQ").click(function(){
-     window.location=$(this).find("a").attr("href");
+    $('#clickTQ').click(function(){
+     window.location=$(this).find('a').attr('href');
      return false;
     });
    
-    $("#clickMC").click(function(){
-     window.location=$(this).find("a").attr("href");
+    $('#clickMC').click(function(){
+     window.location=$(this).find('a').attr('href');
      return false;
     });
-   
+    
     $('#gGame').change(function() {
     	var x= $('#gGame').val()
-    	$('#gType option').not("#default").remove()
+    	$('#gType option').not('#default').remove()
         for(index in types[x]) {
         	$('#gType').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
         };
@@ -46,7 +54,7 @@ $(document).ready(function(){
     
     $('#bGame').change(function() {
     	var x= $('#bGame').val()
-    	$('#bType option').not("#default").remove()
+    	$('#bType option').not('#default').remove()
         for(index in types[x]) {
         	$('#bType').append('<option value="' + types[x][index] + '">' + types[x][index] + '</option>')
         };
@@ -56,29 +64,37 @@ $(document).ready(function(){
     $('#gGuideForm').validate({
     	invalidHandler: function(form, validator){},
     	submitHandler: function(){
-    		alert("Guide saved!");
+    		alert('Guide saved!');
     		location.reload();
     	}
     });
     
     $('#bGuideForm').validate({
     	invalidHandler: function(form, validator){
-    		alert("Error saving guide.");
+    		alert('Error saving guide.');
     		location.reload();
     	},
     	submitHandler: function(){
-    		alert("Guide saved!");
+    		alert('Guide saved!');
     		location.reload();
     	}
     });
     
     $('#gSlide').hide();
     
-    $('.elo').click(function(){
-	    if ($('.elo').is(':checked')){
-	    	$('.slide').show()
+    $('#gELO').click(function(){
+	    if ($('#gELO').is(':checked')){
+	    	$('#gSlide').show()
     	} else {
-			$('.slide').hide()
+			$('#gSlide').hide()
+		};
+    });
+    
+    $('#bELO').click(function(){
+	    if ($('#bELO').is(':checked')){
+	    	$('#bSlide').show()
+    	} else {
+			$('#bSlide').hide()
 		};
     });
 });
