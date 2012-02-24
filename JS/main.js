@@ -1,6 +1,6 @@
 // Russell Carlin
 // MIU 1202
-// Project 3
+// Project 4
 var types = {
         LoL:['Bruiser', 'AP Carry', 'AD Carry', 'Support', 'Jungle'],
         WoW:['Death Knight', 'Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'],
@@ -12,13 +12,12 @@ var types = {
 $(document).ready(function(){
 
 	$.mobile.page.prototype.options.addBackBtn= true;
-	/*
+/*
 $('#gHome').live('pageLoad', function(){
 		var logoHTML='<div class="logoImage"><img width="300px" id="logo" src="Images/GuideHax.png"/></div>';
 		$('.ui-page&ui-body-null).before(logoHTML);
 	});
 */
-
     $('#clickLoL').click(function(){
      window.location=$(this).find('a').attr('href');
      return false;

@@ -1,11 +1,11 @@
 /*
  Russell Carlin
  MIU 1202
- Project 3
+ Project 4
 */
 .tooltip{
 	margin-bottom: 10px;
-	color: #727272;
+	color: #bbbbbb;
 	margin-left: 15px;
 	font-size: 14px 
 }
@@ -17,12 +17,6 @@
 label.error{
 	color: red;
 }
-
-/*
-.ui-page{
-	background-image: -webkit-linear-gradient(#777, #444);
-}
-*/
 
 #gCTA, #bCTA{
 	width: 290px;
@@ -39,14 +33,3 @@ label.error{
 	left: 5px;
 	width: 270px;
 }
-
-/*
-.ui-content {
-	color: #660000;
-}
-
-.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
-	font-family: Lucida Grande,Arial,sans-serif;
-	text-shadow: 0 1px 0 black;
-}
-*/
